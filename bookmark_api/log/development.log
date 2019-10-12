@@ -511,3 +511,274 @@ Processing by BookmarksController#create as HTML
 Completed 201 Created in 12ms (Views: 1.2ms | ActiveRecord: 2.8ms | Allocations: 2744)
 
 
+Started GET "/bookmarks" for 127.0.0.1 at 2019-10-12 14:11:02 -0700
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BookmarksController#index as */*
+  [1m[36mBookmark Load (0.6ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks"[0m
+  ↳ app/controllers/bookmarks_controller.rb:8:in `index'
+Completed 200 OK in 22ms (Views: 13.1ms | ActiveRecord: 5.5ms | Allocations: 6371)
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2019-10-12 14:12:00 -0700
+Processing by BookmarksController#index as */*
+  [1m[36mBookmark Load (0.6ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks"[0m
+  ↳ app/controllers/bookmarks_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.6ms | Allocations: 1559)
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2019-10-12 14:12:05 -0700
+Processing by BookmarksController#index as */*
+  [1m[36mBookmark Load (0.3ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks"[0m
+  ↳ app/controllers/bookmarks_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.3ms | Allocations: 1559)
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2019-10-12 14:12:35 -0700
+Processing by BookmarksController#index as */*
+  [1m[36mBookmark Load (0.9ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks"[0m
+  ↳ app/controllers/bookmarks_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.9ms | Allocations: 1559)
+
+
+Started PUT "/bookmarks/1" for 127.0.0.1 at 2019-10-12 14:12:41 -0700
+Processing by BookmarksController#update as HTML
+  Parameters: {"title"=>"facebook login", "content"=>"social media", "url"=>"www.facebook.com", "id"=>"1", "bookmark"=>{"id"=>"1", "title"=>"facebook login", "content"=>"social media", "url"=>"www.facebook.com"}}
+  [1m[36mBookmark Load (0.5ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bookmarks_controller.rb:44:in `set_bookmark'
+[31mUnpermitted parameter: :id[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookmarks_controller.rb:29:in `update'
+  [1m[36mBookmark Update (2.7ms)[0m  [1m[33mUPDATE "bookmarks" SET "title" = $1, "updated_at" = $2 WHERE "bookmarks"."id" = $3[0m  [["title", "facebook login"], ["updated_at", "2019-10-12 21:12:41.836685"], ["id", 1]]
+  ↳ app/controllers/bookmarks_controller.rb:29:in `update'
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bookmarks_controller.rb:29:in `update'
+Completed 200 OK in 62ms (Views: 0.5ms | ActiveRecord: 5.1ms | Allocations: 6314)
+
+
+Started PUT "/bookmarks/1" for 127.0.0.1 at 2019-10-12 14:12:44 -0700
+Processing by BookmarksController#update as HTML
+  Parameters: {"title"=>"facebook login", "content"=>"social media", "url"=>"www.facebook.com", "id"=>"1", "bookmark"=>{"id"=>"1", "title"=>"facebook login", "content"=>"social media", "url"=>"www.facebook.com"}}
+  [1m[36mBookmark Load (0.4ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bookmarks_controller.rb:44:in `set_bookmark'
+[31mUnpermitted parameter: :id[0m
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 1008)
+
+
+Started PUT "/bookmarks/1" for 127.0.0.1 at 2019-10-12 14:12:45 -0700
+Processing by BookmarksController#update as HTML
+  Parameters: {"title"=>"facebook login", "content"=>"social media", "url"=>"www.facebook.com", "id"=>"1", "bookmark"=>{"id"=>"1", "title"=>"facebook login", "content"=>"social media", "url"=>"www.facebook.com"}}
+  [1m[36mBookmark Load (0.4ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bookmarks_controller.rb:44:in `set_bookmark'
+[31mUnpermitted parameter: :id[0m
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 1008)
+
+
+Started PUT "/bookmarks/1" for 127.0.0.1 at 2019-10-12 14:12:48 -0700
+Processing by BookmarksController#update as HTML
+  Parameters: {"title"=>"facebook login", "content"=>"social media", "url"=>"www.facebook.com", "id"=>"1", "bookmark"=>{"id"=>"1", "title"=>"facebook login", "content"=>"social media", "url"=>"www.facebook.com"}}
+  [1m[36mBookmark Load (0.5ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bookmarks_controller.rb:44:in `set_bookmark'
+[31mUnpermitted parameter: :id[0m
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 1008)
+
+
+Started PUT "/bookmarks/1" for 127.0.0.1 at 2019-10-12 14:12:48 -0700
+Processing by BookmarksController#update as HTML
+  Parameters: {"title"=>"facebook login", "content"=>"social media", "url"=>"www.facebook.com", "id"=>"1", "bookmark"=>{"id"=>"1", "title"=>"facebook login", "content"=>"social media", "url"=>"www.facebook.com"}}
+  [1m[36mBookmark Load (0.4ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bookmarks_controller.rb:44:in `set_bookmark'
+[31mUnpermitted parameter: :id[0m
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 1008)
+
+
+Started PUT "/bookmarks/1" for 127.0.0.1 at 2019-10-12 14:12:49 -0700
+Processing by BookmarksController#update as HTML
+  Parameters: {"title"=>"facebook login", "content"=>"social media", "url"=>"www.facebook.com", "id"=>"1", "bookmark"=>{"id"=>"1", "title"=>"facebook login", "content"=>"social media", "url"=>"www.facebook.com"}}
+  [1m[36mBookmark Load (0.5ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bookmarks_controller.rb:44:in `set_bookmark'
+[31mUnpermitted parameter: :id[0m
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 1006)
+
+
+Started PUT "/bookmarks/1" for 127.0.0.1 at 2019-10-12 14:12:50 -0700
+Processing by BookmarksController#update as HTML
+  Parameters: {"title"=>"facebook login", "content"=>"social media", "url"=>"www.facebook.com", "id"=>"1", "bookmark"=>{"id"=>"1", "title"=>"facebook login", "content"=>"social media", "url"=>"www.facebook.com"}}
+  [1m[36mBookmark Load (0.2ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bookmarks_controller.rb:44:in `set_bookmark'
+[31mUnpermitted parameter: :id[0m
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 1006)
+
+
+Started PUT "/bookmarks/1" for 127.0.0.1 at 2019-10-12 14:13:05 -0700
+Processing by BookmarksController#update as HTML
+  Parameters: {"title"=>"facebook login", "content"=>"social media", "url"=>"www.facebook.com", "id"=>"1", "bookmark"=>{"id"=>"1", "title"=>"facebook login", "content"=>"social media", "url"=>"www.facebook.com"}}
+  [1m[36mBookmark Load (0.3ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bookmarks_controller.rb:44:in `set_bookmark'
+[31mUnpermitted parameter: :id[0m
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 1006)
+
+
+Started PUT "/bookmarks/1" for 127.0.0.1 at 2019-10-12 14:13:05 -0700
+Processing by BookmarksController#update as HTML
+  Parameters: {"title"=>"facebook login", "content"=>"social media", "url"=>"www.facebook.com", "id"=>"1", "bookmark"=>{"id"=>"1", "title"=>"facebook login", "content"=>"social media", "url"=>"www.facebook.com"}}
+  [1m[36mBookmark Load (0.2ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bookmarks_controller.rb:44:in `set_bookmark'
+[31mUnpermitted parameter: :id[0m
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 1006)
+
+
+Started PUT "/bookmarks/1" for 127.0.0.1 at 2019-10-12 14:14:19 -0700
+Processing by BookmarksController#update as HTML
+  Parameters: {"title"=>"facebook login", "content"=>"social media", "url"=>"www.facebook.com", "id"=>"1", "bookmark"=>{"id"=>"1", "title"=>"facebook login", "content"=>"social media", "url"=>"www.facebook.com"}}
+  [1m[36mBookmark Load (0.4ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bookmarks_controller.rb:44:in `set_bookmark'
+[31mUnpermitted parameter: :id[0m
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 1006)
+
+
+Started PUT "/bookmarks/1" for 127.0.0.1 at 2019-10-12 14:14:19 -0700
+Processing by BookmarksController#update as HTML
+  Parameters: {"title"=>"facebook login", "content"=>"social media", "url"=>"www.facebook.com", "id"=>"1", "bookmark"=>{"id"=>"1", "title"=>"facebook login", "content"=>"social media", "url"=>"www.facebook.com"}}
+  [1m[36mBookmark Load (0.3ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bookmarks_controller.rb:44:in `set_bookmark'
+[31mUnpermitted parameter: :id[0m
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 1006)
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2019-10-12 14:50:26 -0700
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BookmarksController#index as */*
+  [1m[36mBookmark Load (0.6ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks"[0m
+  ↳ app/controllers/bookmarks_controller.rb:8:in `index'
+Completed 200 OK in 21ms (Views: 12.7ms | ActiveRecord: 5.3ms | Allocations: 6371)
+
+
+Started PUT "/bookmarks/4" for 127.0.0.1 at 2019-10-12 14:50:47 -0700
+Processing by BookmarksController#update as HTML
+  Parameters: {"title"=>"yahoo ", "content"=>"search engine", "url"=>"www.yahoo.com", "id"=>"4", "bookmark"=>{"id"=>"4", "title"=>"yahoo ", "content"=>"search engine", "url"=>"www.yahoo.com"}}
+  [1m[36mBookmark Load (0.3ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bookmarks_controller.rb:44:in `set_bookmark'
+[31mUnpermitted parameter: :id[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookmarks_controller.rb:29:in `update'
+  [1m[36mBookmark Update (1.3ms)[0m  [1m[33mUPDATE "bookmarks" SET "title" = $1, "url" = $2, "updated_at" = $3 WHERE "bookmarks"."id" = $4[0m  [["title", "yahoo "], ["url", "www.yahoo.com"], ["updated_at", "2019-10-12 21:50:47.052346"], ["id", 4]]
+  ↳ app/controllers/bookmarks_controller.rb:29:in `update'
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bookmarks_controller.rb:29:in `update'
+Completed 200 OK in 15ms (Views: 0.7ms | ActiveRecord: 3.9ms | Allocations: 3914)
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2019-10-12 14:53:59 -0700
+Processing by BookmarksController#index as */*
+  [1m[36mBookmark Load (0.7ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks"[0m
+  ↳ app/controllers/bookmarks_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.7ms | Allocations: 1559)
+
+
+Started PUT "/bookmarks/5" for 127.0.0.1 at 2019-10-12 14:54:12 -0700
+Processing by BookmarksController#update as HTML
+  Parameters: {"title"=>"pingpon", "content"=>"international table tennis association", "url"=>"http://www.ittf.com/", "id"=>"5", "bookmark"=>{"id"=>"5", "title"=>"pingpon", "content"=>"international table tennis association", "url"=>"http://www.ittf.com/"}}
+  [1m[36mBookmark Load (0.4ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/bookmarks_controller.rb:44:in `set_bookmark'
+[31mUnpermitted parameter: :id[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookmarks_controller.rb:29:in `update'
+  [1m[36mBookmark Update (1.1ms)[0m  [1m[33mUPDATE "bookmarks" SET "title" = $1, "updated_at" = $2 WHERE "bookmarks"."id" = $3[0m  [["title", "pingpon"], ["updated_at", "2019-10-12 21:54:12.151970"], ["id", 5]]
+  ↳ app/controllers/bookmarks_controller.rb:29:in `update'
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bookmarks_controller.rb:29:in `update'
+Completed 200 OK in 13ms (Views: 0.8ms | ActiveRecord: 3.0ms | Allocations: 3021)
+
+
+Started PUT "/bookmarks/5" for 127.0.0.1 at 2019-10-12 14:54:13 -0700
+Processing by BookmarksController#update as HTML
+  Parameters: {"title"=>"pingpon", "content"=>"international table tennis association", "url"=>"http://www.ittf.com/", "id"=>"5", "bookmark"=>{"id"=>"5", "title"=>"pingpon", "content"=>"international table tennis association", "url"=>"http://www.ittf.com/"}}
+  [1m[36mBookmark Load (0.4ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/bookmarks_controller.rb:44:in `set_bookmark'
+[31mUnpermitted parameter: :id[0m
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 1012)
+
+
+Started PUT "/bookmarks/5" for 127.0.0.1 at 2019-10-12 14:54:14 -0700
+Processing by BookmarksController#update as HTML
+  Parameters: {"title"=>"pingpon", "content"=>"international table tennis association", "url"=>"http://www.ittf.com/", "id"=>"5", "bookmark"=>{"id"=>"5", "title"=>"pingpon", "content"=>"international table tennis association", "url"=>"http://www.ittf.com/"}}
+  [1m[36mBookmark Load (0.3ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/bookmarks_controller.rb:44:in `set_bookmark'
+[31mUnpermitted parameter: :id[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 1009)
+
+
+Started PUT "/bookmarks/5" for 127.0.0.1 at 2019-10-12 14:54:15 -0700
+Processing by BookmarksController#update as HTML
+  Parameters: {"title"=>"pingpon", "content"=>"international table tennis association", "url"=>"http://www.ittf.com/", "id"=>"5", "bookmark"=>{"id"=>"5", "title"=>"pingpon", "content"=>"international table tennis association", "url"=>"http://www.ittf.com/"}}
+  [1m[36mBookmark Load (0.3ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/bookmarks_controller.rb:44:in `set_bookmark'
+[31mUnpermitted parameter: :id[0m
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 1025)
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2019-10-12 16:35:17 -0700
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BookmarksController#index as */*
+  [1m[36mBookmark Load (0.6ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks"[0m
+  ↳ app/controllers/bookmarks_controller.rb:8:in `index'
+Completed 200 OK in 30ms (Views: 18.0ms | ActiveRecord: 9.1ms | Allocations: 6371)
+
+
+Started PUT "/bookmarks/undefined" for 127.0.0.1 at 2019-10-12 16:36:05 -0700
+Processing by BookmarksController#update as HTML
+  Parameters: {"title"=>"my profolio", "content"=>"my resume shit", "url"=>"https://www.ihanchang.com", "id"=>"undefined", "bookmark"=>{"title"=>"my profolio", "content"=>"my resume shit", "url"=>"https://www.ihanchang.com"}}
+  [1m[36mBookmark Load (0.5ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/bookmarks_controller.rb:44:in `set_bookmark'
+Completed 404 Not Found in 20ms (ActiveRecord: 0.9ms | Allocations: 3769)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Bookmark with 'id'=undefined):
+  
+app/controllers/bookmarks_controller.rb:44:in `set_bookmark'
+Started PUT "/bookmarks/undefined" for 127.0.0.1 at 2019-10-12 16:36:11 -0700
+Processing by BookmarksController#update as HTML
+  Parameters: {"title"=>"my profolio", "content"=>"my resume shit", "url"=>"https://www.ihanchang.com", "id"=>"undefined", "bookmark"=>{"title"=>"my profolio", "content"=>"my resume shit", "url"=>"https://www.ihanchang.com"}}
+  [1m[36mBookmark Load (0.3ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/bookmarks_controller.rb:44:in `set_bookmark'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms | Allocations: 669)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Bookmark with 'id'=undefined):
+  
+app/controllers/bookmarks_controller.rb:44:in `set_bookmark'
+Started GET "/bookmarks" for 127.0.0.1 at 2019-10-12 16:36:36 -0700
+Processing by BookmarksController#index as */*
+  [1m[36mBookmark Load (0.3ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks"[0m
+  ↳ app/controllers/bookmarks_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms | Allocations: 1576)
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2019-10-12 16:37:00 -0700
+Processing by BookmarksController#index as */*
+  [1m[36mBookmark Load (0.4ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks"[0m
+  ↳ app/controllers/bookmarks_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.4ms | Allocations: 1544)
+
+
+Started POST "/bookmarks" for 127.0.0.1 at 2019-10-12 16:37:25 -0700
+Processing by BookmarksController#create as HTML
+  Parameters: {"title"=>"my resume", "content"=>"my profolio", "url"=>"https://www.ihanchang.com", "bookmark"=>{"title"=>"my resume", "content"=>"my profolio", "url"=>"https://www.ihanchang.com"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookmarks_controller.rb:20:in `create'
+  [1m[36mBookmark Create (3.6ms)[0m  [1m[32mINSERT INTO "bookmarks" ("title", "content", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "my resume"], ["content", "my profolio"], ["url", "https://www.ihanchang.com"], ["created_at", "2019-10-12 23:37:25.342183"], ["updated_at", "2019-10-12 23:37:25.342183"]]
+  ↳ app/controllers/bookmarks_controller.rb:20:in `create'
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bookmarks_controller.rb:20:in `create'
+Completed 201 Created in 15ms (Views: 1.4ms | ActiveRecord: 5.3ms | Allocations: 2759)
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2019-10-12 16:47:12 -0700
+Processing by BookmarksController#index as */*
+  [1m[36mBookmark Load (0.9ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks"[0m
+  ↳ app/controllers/bookmarks_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.9ms | Allocations: 1790)
+
+

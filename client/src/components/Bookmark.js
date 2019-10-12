@@ -7,7 +7,10 @@ class Bookmark extends Component{
 	toggleForm = () => {
 		this.setState({formVisible: !this.state.formVisible})	
 	}
-
+	handleUpdate = (event, bookmark) => {
+		this.props.handleUpdate(event, bookmark)
+		this.toggleForm()
+	}
 render(){
 	const {bookmark , handleDelete} = this.props
 	return(
@@ -15,7 +18,11 @@ render(){
 		{
 			this.state.formVisible
 			?
-			<Form bookmark={bookmark}/>
+			<Form 
+				bookmark={bookmark}
+				handleSubmit={this.handleUpdate}
+			>
+			</Form>
 
 			:<div className="bookmark">
 			<h3>{bookmark.title}</h3>
