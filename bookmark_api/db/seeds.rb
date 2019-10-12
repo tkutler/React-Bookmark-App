@@ -6,10 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-	Bookmark.create(
-		[{ title: 'fb' , content: 'social media' , url:'www.facebook.com'},
-		 {title: 'forever21' , content: 'shop' , url:'www.forever21.com'},
-		{title: 'google' , content: 'search engine' , url:'www.google.com'}]
+	# Bookmark.create(
+	# 	[{ title: 'fb' , content: 'social media' , url:'www.facebook.com'},
+	# 	 {title: 'forever21' , content: 'shop' , url:'www.forever21.com'},
+	# 	{title: 'google' , content: 'search engine' , url:'www.google.com'}]
+	# )
+
+Bookmark.create(
+		[{title: 'google' , content: 'search engine' , url:'www.google.com'}]
 	)
-
-
