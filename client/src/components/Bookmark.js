@@ -1,7 +1,7 @@
-import React , { Component }from 'react'
+import React from 'react'
 import Form from './Form.js'
-class Bookmark extends Component{
-	state = {
+class Bookmark extends React.Component{
+    state = {
 		formVisible: false
 	}
 	toggleForm = () => {
@@ -11,6 +11,7 @@ class Bookmark extends Component{
 		this.props.handleUpdate(event, bookmark)
 		this.toggleForm()
 	}
+	
 render(){
 	const {bookmark , handleDelete} = this.props
 	return(

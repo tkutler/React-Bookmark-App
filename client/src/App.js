@@ -32,7 +32,7 @@ class App extends React.Component {
     this.getBookmarks()
   }
   getBookmarks = () => {
-    fetch('/bookmarks')
+    fetch('http://localhost:3000/bookmarks')
       .then(response => response.json())
       .then(json => this.setState({bookmarks: json}))
       .catch(error => console.error(error))
@@ -66,6 +66,7 @@ class App extends React.Component {
           <Main 
            bookmarks={this.state.bookmarks} 
            handleDelete={this.handleDelete}
+           handleUpdate={this.handleUpdate}
            />
       </div>
     </div>

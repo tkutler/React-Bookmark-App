@@ -2,7 +2,7 @@ import React , { Component } from 'react'
 import Input from './Input.js'
 
 class Form extends Component{
-	constructor(props){
+	  constructor(props){
 		super(props)
 		this.state = {
 			title:'',
@@ -11,9 +11,8 @@ class Form extends Component{
 		}
 		this.handleSubmit = this.handleSubmit.bind(this)
 		this.handleChange = this.handleChange.bind(this)
-
 	}
-	componentWillMount(){
+	  componentWillMount(){
 		if(this.props.bookmark){
 			this.setState({
 				title: this.props.bookmark.title || '',
@@ -23,10 +22,10 @@ class Form extends Component{
 			})
 		}
 	}
-	handleChange (event) {
+	  handleChange (event) {
         this.setState({[event.target.id] : event.target.value})
     }
-    handleUpdate = (event, formInputs) => {
+      handleUpdate = (event, formInputs) => {
   		event.preventDefault()
   		console.log('in it to win it')
   		fetch(`/bookmarks/${formInputs.id}`, {
@@ -43,13 +42,13 @@ class Form extends Component{
  			})
  			.catch(error => console.log(error))
 	}
-    handleSubmit(event){
+    mmhandleSubmit(event){
     	event.preventDefault()
     	const bookmark = {
     		title: this.state.title,
     		content: this.state.content,
     		url: this.state.url
-    	}
+    		    	}
     	if(this.props.bookmark) bookmark.id = this.props.bookmark.id
     		this.props.handleSubmit(
     			event,

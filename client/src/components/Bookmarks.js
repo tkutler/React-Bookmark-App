@@ -2,7 +2,7 @@ import React from 'react'
 import Bookmark from './Bookmark.js'
 
 function Bookmarks (props){
-	const {bookmarks , handleDelete} = props
+	const {bookmarks , handleDelete, handleUpdate} = props
 	return (
 		<>
 		<div>
@@ -11,6 +11,7 @@ function Bookmarks (props){
 			key ={bookmark.id}
 			bookmark={bookmark}
 			handleDelete={handleDelete}
+			handleUpdate={handleUpdate}
 			/>
 		)}
 		</div>
