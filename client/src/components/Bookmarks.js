@@ -4,7 +4,7 @@ import Bookmark from './Bookmark.js'
 function Bookmarks (props){
 	const {bookmarks , handleDelete, handleUpdate} = props
 	return (
-		<>
+		
 		<div>
 		{bookmarks.map( bookmark => 
 			<Bookmark 
@@ -15,7 +15,7 @@ function Bookmarks (props){
 			/>
 		)}
 		</div>
-		</>
+		
 			
 	)
 

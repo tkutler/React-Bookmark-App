@@ -51,7 +51,23 @@ class App extends React.Component {
  })
  .catch(error => console.log(error))
 }
-  
+  handleUpdate = (event, formInputs) => {
+      event.preventDefault()
+      console.log('in it to win it')
+      fetch(`/bookmarks/${formInputs.id}`, {
+         body: JSON.stringify(formInputs),
+         method: 'PUT',
+    headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(updateBookmark => {
+      // be naughty
+        this.getBookmarks()
+      })
+      .catch(error => console.log(error))
+  }
     
   render() {
     return (

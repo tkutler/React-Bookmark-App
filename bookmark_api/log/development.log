@@ -1270,3 +1270,68 @@ Processing by BookmarksController#index as */*
 Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 2.6ms | Allocations: 1933)
 
 
+Started GET "/bookmarks" for ::1 at 2019-10-14 18:56:01 -0700
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BookmarksController#index as */*
+  [1m[36mBookmark Load (1.2ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks"[0m
+  ↳ app/controllers/bookmarks_controller.rb:8:in `index'
+Completed 200 OK in 39ms (Views: 20.9ms | ActiveRecord: 13.8ms | Allocations: 6662)
+
+
+Started GET "/bookmarks" for ::1 at 2019-10-14 19:02:13 -0700
+Processing by BookmarksController#index as */*
+  [1m[36mBookmark Load (0.8ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks"[0m
+  ↳ app/controllers/bookmarks_controller.rb:8:in `index'
+Completed 200 OK in 20ms (Views: 15.3ms | ActiveRecord: 0.8ms | Allocations: 1944)
+
+
+Started GET "/bookmarks" for ::1 at 2019-10-14 19:04:16 -0700
+Processing by BookmarksController#index as */*
+  [1m[36mBookmark Load (0.4ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks"[0m
+  ↳ app/controllers/bookmarks_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.4ms | Allocations: 1849)
+
+
+Started GET "/bookmarks" for ::1 at 2019-10-14 19:04:54 -0700
+Processing by BookmarksController#index as */*
+  [1m[36mBookmark Load (0.6ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks"[0m
+  ↳ app/controllers/bookmarks_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.6ms | Allocations: 1849)
+
+
+Started GET "/bookmarks" for ::1 at 2019-10-14 19:08:55 -0700
+Processing by BookmarksController#index as */*
+  [1m[36mBookmark Load (0.4ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks"[0m
+  ↳ app/controllers/bookmarks_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.4ms | Allocations: 1850)
+
+
+Started GET "/bookmarks" for ::1 at 2019-10-14 19:08:56 -0700
+Processing by BookmarksController#index as */*
+  [1m[36mBookmark Load (0.5ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks"[0m
+  ↳ app/controllers/bookmarks_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.5ms | Allocations: 1834)
+
+
+Started PUT "/bookmarks/6" for 127.0.0.1 at 2019-10-14 19:09:24 -0700
+Processing by BookmarksController#update as HTML
+  Parameters: {"title"=>"stuffss", "content"=>"random", "url"=>"www.stuff.com", "id"=>"6", "bookmark"=>{"id"=>"6", "title"=>"stuffss", "content"=>"random", "url"=>"www.stuff.com"}}
+  [1m[36mBookmark Load (0.7ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/bookmarks_controller.rb:44:in `set_bookmark'
+[31mUnpermitted parameter: :id[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookmarks_controller.rb:29:in `update'
+  [1m[36mBookmark Update (5.6ms)[0m  [1m[33mUPDATE "bookmarks" SET "title" = $1, "updated_at" = $2 WHERE "bookmarks"."id" = $3[0m  [["title", "stuffss"], ["updated_at", "2019-10-15 02:09:25.026726"], ["id", 6]]
+  ↳ app/controllers/bookmarks_controller.rb:29:in `update'
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bookmarks_controller.rb:29:in `update'
+Completed 200 OK in 47ms (Views: 0.4ms | ActiveRecord: 8.4ms | Allocations: 6296)
+
+
+Started GET "/bookmarks" for ::1 at 2019-10-14 19:09:25 -0700
+Processing by BookmarksController#index as */*
+  [1m[36mBookmark Load (0.3ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks"[0m
+  ↳ app/controllers/bookmarks_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.3ms | Allocations: 1834)
+
+

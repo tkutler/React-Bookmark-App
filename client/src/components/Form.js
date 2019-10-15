@@ -25,24 +25,8 @@ class Form extends Component{
 	  handleChange (event) {
         this.setState({[event.target.id] : event.target.value})
     }
-      handleUpdate = (event, formInputs) => {
-  		event.preventDefault()
-  		console.log('in it to win it')
-  		fetch(`/bookmarks/${formInputs.id}`, {
-   			 body: JSON.stringify(formInputs),
-   			 method: 'PUT',
- 		headers: {
-   			'Accept': 'application/json, text/plain, */*',
-   			'Content-Type': 'application/json'
- 			}
-		})
- 		.then(updateBookmark => {
-   		// be naughty
-   			this.getBookmarks()
- 			})
- 			.catch(error => console.log(error))
-	}
-    mmhandleSubmit(event){
+   
+    handleSubmit(event){
     	event.preventDefault()
     	const bookmark = {
     		title: this.state.title,
