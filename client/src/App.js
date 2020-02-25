@@ -8,6 +8,8 @@ class App extends React.Component {
   state ={
     bookmarks :[]
   }
+  // adds bookmark to db 
+
   handleAdd = (e, formInputs) => {
     e.preventDefault()
     console.log(formInputs)
@@ -28,15 +30,18 @@ class App extends React.Component {
   })
   .catch(error => console.log(error))
   }
+  //refreshes current bookmark list
   componentDidMount() {
     this.getBookmarks()
   }
+  //retrieves bookmarks
   getBookmarks = () => {
     fetch('http://localhost:3000/bookmarks')
       .then(response => response.json())
       .then(json => this.setState({bookmarks: json}))
       .catch(error => console.error(error))
   }
+  //deletes bookmark from db
   handleDelete = (deletedBookmark) => {
   fetch(`/bookmarks/${deletedBookmark.id}`, {
      method: 'DELETE',
@@ -51,9 +56,9 @@ class App extends React.Component {
  })
  .catch(error => console.log(error))
 }
+//updates db entry
   handleUpdate = (event, formInputs) => {
       event.preventDefault()
-      console.log('in it to win it')
       fetch(`/bookmarks/${formInputs.id}`, {
          body: JSON.stringify(formInputs),
          method: 'PUT',
@@ -68,7 +73,7 @@ class App extends React.Component {
       })
       .catch(error => console.log(error))
   }
-    
+   // returned html 
   render() {
     return (
       <>
