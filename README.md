@@ -1,4 +1,5 @@
 # React-Bookmark-App
+Created By Toby Kutler and Mitchell Chang
 A CRUD application that allows users to create a bookmark list of URLs
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
